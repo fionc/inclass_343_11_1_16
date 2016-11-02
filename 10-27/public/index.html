@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>In Class Chat App</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -11,6 +12,51 @@
         <h1>In Class Chat App</h1>
 
         <div class="row">
+<div class="col col-sm-6">  
+                <form id="signup-form">
+                    <legend>Signup</legend>
+
+                    <ul class="list-unstyled">
+                         <li class="form-group">
+                            <label for="signup-name" class="control-label">Display Name:</label>
+                            <input 
+                                type="text" 
+                                id="signup-name" 
+                                class="form-control" 
+                                placeholder="First Name Last Name"
+                                required
+                            />
+                        </li>
+
+                        <li class="form-group">
+                            <label for="signup-email" class="control-label">Email:</label>
+                            <input type="email" id="signup-email" class="form-control" placeholder="test@example.com" required/>
+                        </li>
+
+                        <li class="form-group">
+                            <label for="signup-password" class="control-label">Password:</label>
+                            <input type="password" id="signup-password" class="form-control" placeholder="Your password" required/>
+                        </li>
+
+                        <li class="form-group">
+                            <label for="signup-password" class="control-label">Password:(Confirm)</label>
+                            <input type="password" id="signup-password-confirm" class="form-control" placeholder="Your password (again)" required/>
+                        </li>
+                        <li class="form-group">
+                            <button
+                                id="signup-button"
+                                type="submit"
+                                class="btn btn-primary">Sign Up</button>
+                        </li>
+                    </ul>
+                </form>
+
+                <div id="signup-error" class="alert alert-danger" role="alert"> </div>
+
+            </div>
+
+
+
             <div class="col col-sm-6">
                 <form id="login-form">
                     <legend>Login</legend>
@@ -40,5 +86,6 @@
 
     <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript"  src="login.js"></script>
 </body>
 </html>
